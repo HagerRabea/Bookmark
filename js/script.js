@@ -20,7 +20,7 @@ function add(){
       errorurl.classList.replace("d-none","d-flex");
       errorurl.innerHTML="Url Field is required";
       break;
-    }else if(nameInput.value==urls[i].username&&urlInput.value==urls[i].userurl){
+    }else if(nameInput.value==urls[i].username&&urlInput.value.include(urls[i].userurl)){
         errorName.classList.replace("d-none","d-flex");
         errorName.innerHTML="This Name Is Already Exist";
         errorurl.classList.replace("d-none","d-flex");
