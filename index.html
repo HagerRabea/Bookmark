@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task2JS</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+    
+  <h3 class="container mb-5 mt-4 fw-bold ">Bookmarker</h3>
+  <div class="line1"></div>
+  <section class="container d-flex flex-column justify-content-center align-items-center section1 mb-3">
+      <h4 class="mb-3 fw-bold">BookMark You Favorite Sites</h4>
+      <label class="mb-3 mt-4">Site Name</label>
+      <input type="text" name="siteName" id="name"  class="w-75 " placeholder="Bookmark Name">
+      <div class="errorName d-none justify-content-center align-items-center mb-3 w-75" id="error1"> 
+        Name is required
+      </div>
+      <label class="mb-3">Site URL</label>
+      <input type="text" name="siteURL" id="url" class="w-75 " placeholder="website URL">
+      <div class="errorName d-none justify-content-center align-items-center w-75 " id="error2"> 
+        Url Field is required
+    </div>
+    <button class=" mt-3 text-white  " id="submit">Submit</button>
+  </section>
+
+  <table class="table container">
+    <tbody id="tbody" >
+
+    </tbody>
+</table>
+  <div class="line2"></div>
+
+<footer class="container">&#169 2019 Bookmarker Inc.</footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
