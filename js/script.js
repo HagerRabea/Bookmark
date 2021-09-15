@@ -13,20 +13,14 @@ if(localStorage.getItem("userWebsites")==null){
   }
 display();
 function add(){
-    for(var i=0; i<urls.length; i++){
+   
     if(nameInput.value==""||urlInput.value==""){
       errorName.classList.replace("d-none","d-flex");
       errorName.innerHTML="Name is requiredt";
       errorurl.classList.replace("d-none","d-flex");
       errorurl.innerHTML="Url Field is required";
-      break;
-    }else if(nameInput.value==urls[i].username&&urlInput.value.include(urls[i].userurl)){
-        errorName.classList.replace("d-none","d-flex");
-        errorName.innerHTML="This Name Is Already Exist";
-        errorurl.classList.replace("d-none","d-flex");
-        errorurl.innerHTML="This URL Is Alraedy Exist";
-        break;
-    }
+      }
+
     else{
         
         var urlobject={
@@ -36,7 +30,7 @@ function add(){
         urls.push(urlobject);
         localStorage.setItem("userWebsites",JSON.stringify(urls));
         console.log(urls);
-        break;}}
+      }
     nameInput.addEventListener("click",function(){
         errorName.classList.replace("d-flex","d-none");
     })
